@@ -1,4 +1,3 @@
-
 import britishCouncilLogo from '../assets/britishcouncil_og_logo.jpg';
 import pearsonEdexcelLogo from '../assets/Edexcel.svg.webp';
 import aboutSchoolImage from '../assets/about-school.jfif';
@@ -41,28 +40,55 @@ export default function About() {
           1. ABOUT HERO
       ====================================================== */}
       <section className="relative isolate overflow-hidden bg-[#FCF9F4]">
-      {/* =================================================
+
+        {/* =================================================
             PAGE-SPECIFIC BACKGROUND
         ================================================== */}
+        <div className="pointer-events-none absolute inset-0 z-0 overflow-hidden">
 
-      <div className="pointer-events-none absolute inset-0 z-0 overflow-hidden">
-        <div
-          className="absolute inset-y-0 right-0 w-full md:w-[68%] lg:w-[62%] bg-cover bg-center"
-          style={{
-            backgroundImage: `url(${aboutSchoolImage})`,
-            maskImage:
-              'linear-gradient(to right, transparent 0%, rgba(0,0,0,0.25) 10%, rgba(0,0,0,0.65) 25%, rgba(0,0,0,0.9) 38%, black 50%)',
-            WebkitMaskImage:
-              'linear-gradient(to right, transparent 0%, rgba(0,0,0,0.25) 10%, rgba(0,0,0,0.65) 25%, rgba(0,0,0,0.9) 38%, black 50%)',
-          }}
-        />
+          {/* Background Image */}
+          <div
+            className="
+              absolute
+              inset-y-0
+              right-0
+              w-full
+              bg-cover
+              bg-center
+              opacity-25
+              sm:opacity-35
+              md:w-[68%]
+              md:opacity-70
+              lg:w-[62%]
+              lg:opacity-100
+            "
+            style={{
+              backgroundImage: `url(${aboutSchoolImage})`,
+              maskImage:
+                'linear-gradient(to right, transparent 0%, rgba(0,0,0,0.25) 10%, rgba(0,0,0,0.65) 25%, rgba(0,0,0,0.9) 38%, black 50%)',
+              WebkitMaskImage:
+                'linear-gradient(to right, transparent 0%, rgba(0,0,0,0.25) 10%, rgba(0,0,0,0.65) 25%, rgba(0,0,0,0.9) 38%, black 50%)',
+            }}
+          />
 
-        {/* Left-side soft fade — kept lighter so text remains readable */}
-        <div className="absolute inset-0 bg-gradient-to-r from-[#FCF9F4] via-[#FCF9F4]/80 via-[25%] via-[#FCF9F4]/25 via-[42%] to-transparent" />
+          {/* Left-side soft fade */}
+          <div
+            className="
+              absolute
+              inset-0
+              bg-gradient-to-r
+              from-[#FCF9F4]
+              via-[#FCF9F4]/80
+              via-[25%]
+              via-[#FCF9F4]/25
+              via-[42%]
+              to-transparent
+            "
+          />
 
-        {/* Very subtle overall top/bottom fade */}
-        <div className="absolute inset-0 bg-gradient-to-b from-[#FCF9F4]/5 via-transparent to-[#FCF9F4]/20" />
-      </div>
+          {/* Very subtle overall top/bottom fade */}
+          <div className="absolute inset-0 bg-gradient-to-b from-[#FCF9F4]/5 via-transparent to-[#FCF9F4]/20" />
+        </div>
 
 
         {/* =================================================
@@ -75,9 +101,11 @@ export default function About() {
               grid
               min-h-[560px]
               items-center
-              py-12
+              pt-24
+              pb-12
               sm:min-h-[600px]
-              sm:py-14
+              sm:pt-28
+              sm:pb-14
               lg:min-h-[650px]
               lg:grid-cols-2
               lg:py-16
@@ -87,7 +115,7 @@ export default function About() {
             {/* =================================================
                 LEFT CONTENT
             ================================================== */}
-            <div className="max-w-2xl">
+            <div className="relative z-10 max-w-2xl">
 
               {/* Eyebrow */}
               <div className="mb-4 flex items-center gap-3">
@@ -187,7 +215,6 @@ export default function About() {
           </div>
 
         </div>
-
       </section>
 
 
@@ -249,7 +276,6 @@ export default function About() {
           </div>
 
         </div>
-
       </section>
 
 
@@ -385,7 +411,6 @@ export default function About() {
           </div>
 
         </div>
-
       </section>
 
 
@@ -515,7 +540,6 @@ export default function About() {
           </div>
 
         </div>
-
       </section>
 
 

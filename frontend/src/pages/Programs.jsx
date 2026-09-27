@@ -1,3 +1,4 @@
+
 import { useEffect, useState } from 'react';
 import { Link } from 'react-router-dom';
 import api from '../api/api.js';
@@ -66,8 +67,11 @@ function ProgramFlipCard({ program, index }) {
   return (
     <div className="group h-[310px] [perspective:1200px]">
       <div className="relative h-full w-full transition-transform duration-700 [transform-style:preserve-3d] group-hover:[transform:rotateY(180deg)]">
-        <div className="absolute inset-0 flex h-full w-full flex-col overflow-hidden rounded-[24px] border border-[#E8DDCE] bg-white p-7 shadow-[0_12px_35px_rgba(74,35,30,0.07)] [backface-visibility:hidden]">
-          <div className="flex items-center justify-between">
+
+        {/* FRONT */}
+        <div className="absolute inset-0 flex h-full w-full flex-col overflow-hidden rounded-[24px] border border-[#E8DDCE] bg-white p-5 sm:p-7 shadow-[0_12px_35px_rgba(74,35,30,0.07)] [backface-visibility:hidden]">
+
+          <div className="flex items-center justify-between gap-2">
             <span className="flex h-11 w-11 shrink-0 items-center justify-center rounded-xl bg-[#F5E8D3] text-sm font-bold text-[#8B2028]">
               0{index + 1}
             </span>
@@ -79,13 +83,13 @@ function ProgramFlipCard({ program, index }) {
             )}
           </div>
 
-          <div className="mt-6 h-px w-10 shrink-0 bg-[#C6A75E]" />
+          <div className="mt-5 h-px w-10 shrink-0 bg-[#C6A75E]" />
 
-          <p className="mt-4 text-xs font-bold uppercase tracking-[0.18em] text-[#9B7A35]">
+          <p className="mt-3 text-xs font-bold uppercase tracking-[0.18em] text-[#9B7A35]">
             {program.tagline}
           </p>
 
-          <h3 className="mt-2 text-2xl font-semibold leading-tight text-[#54151A]">
+          <h3 className="mt-2 text-xl font-semibold leading-tight text-[#54151A] sm:text-2xl">
             {program.title}
           </h3>
 
@@ -94,9 +98,11 @@ function ProgramFlipCard({ program, index }) {
           </p>
         </div>
 
-        <div className="absolute inset-0 flex h-full w-full flex-col overflow-hidden rounded-[24px] bg-[#54151A] p-6 [backface-visibility:hidden] [transform:rotateY(180deg)]">
-          <div className="flex items-center justify-between">
-            <span className="flex h-10 w-10 items-center justify-center rounded-xl bg-white/10 text-sm font-bold text-[#E7C45E]">
+        {/* BACK */}
+        <div className="absolute inset-0 flex h-full w-full flex-col overflow-hidden rounded-[24px] bg-[#54151A] p-5 sm:p-6 [backface-visibility:hidden] [transform:rotateY(180deg)]">
+
+          <div className="flex items-center justify-between gap-2">
+            <span className="flex h-10 w-10 shrink-0 items-center justify-center rounded-xl bg-white/10 text-sm font-bold text-[#E7C45E]">
               0{index + 1}
             </span>
 
@@ -105,9 +111,9 @@ function ProgramFlipCard({ program, index }) {
             </span>
           </div>
 
-          <div className="mt-4 h-px w-9 bg-[#E7C45E]" />
+          <div className="mt-4 h-px w-9 shrink-0 bg-[#E7C45E]" />
 
-          <h3 className="mt-3 text-xl font-semibold leading-tight text-white">
+          <h3 className="mt-3 text-lg font-semibold leading-tight text-white sm:text-xl">
             {program.title}
           </h3>
 
@@ -120,13 +126,13 @@ function ProgramFlipCard({ program, index }) {
             ]).map((fact, factIndex) => (
               <div
                 key={factIndex}
-                className="min-h-[55px] rounded-lg bg-white/10 px-3 py-2"
+                className="min-h-[55px] min-w-0 rounded-lg bg-white/10 px-2.5 py-2 sm:px-3"
               >
                 <p className="text-[8px] font-bold uppercase tracking-wider text-[#DDBE70]">
                   {fact.label}
                 </p>
 
-                <p className="mt-0.5 text-[11px] font-semibold leading-4 text-white">
+                <p className="mt-0.5 break-words text-[11px] font-semibold leading-4 text-white">
                   {fact.value}
                 </p>
               </div>
@@ -163,11 +169,33 @@ export default function Programs() {
   }, []);
 
   return (
-    <div className="bg-[#FCF9F4] text-navy">
+    <div className="min-h-screen overflow-x-clip bg-[#FCF9F4] text-navy">
+
+      {/* =====================================================
+          1. PROGRAMS HERO
+      ====================================================== */}
       <section className="relative isolate overflow-hidden bg-[#FCF9F4]">
+
+        {/* BACKGROUND */}
         <div className="pointer-events-none absolute inset-0 z-0 overflow-hidden">
+
+          {/* Background Image */}
           <div
-            className="absolute inset-y-0 left-0 md:-left-[100px] w-full md:w-[68%] lg:w-[62%] bg-cover bg-center"
+            className="
+              absolute
+              inset-y-0
+              left-0
+              w-full
+              bg-cover
+              bg-center
+              opacity-20
+              sm:opacity-30
+              md:-left-[100px]
+              md:w-[68%]
+              md:opacity-70
+              lg:w-[62%]
+              lg:opacity-100
+            "
             style={{
               backgroundImage: `url(${programImage})`,
               maskImage:
@@ -177,57 +205,91 @@ export default function Programs() {
             }}
           />
 
+          {/* Soft overlay for mobile text readability */}
+          <div className="absolute inset-0 bg-[#FCF9F4]/45 sm:bg-[#FCF9F4]/30 md:bg-transparent" />
+
+          {/* Existing right-side fade */}
           <div className="absolute inset-0 bg-gradient-to-r from-transparent via-transparent to-[#FCF9F4]/95" />
 
+          {/* Top and bottom fade */}
           <div className="absolute inset-0 bg-gradient-to-b from-[#FCF9F4]/10 via-transparent to-[#FCF9F4]/35" />
         </div>
 
+        {/* HERO CONTENT */}
         <div className="container-page relative z-10">
-          <div className="grid min-h-[560px] items-center py-12 sm:min-h-[600px] sm:py-14 lg:min-h-[650px] lg:grid-cols-2 lg:py-16">
+
+          <div
+            className="
+              grid
+              min-h-[560px]
+              items-center
+              pt-24
+              pb-12
+              sm:min-h-[600px]
+              sm:pt-28
+              sm:pb-14
+              lg:min-h-[650px]
+              lg:grid-cols-2
+              lg:py-16
+            "
+          >
+
+            {/* Empty left column on desktop */}
             <div className="hidden lg:block" />
 
-            <div>
-              <div className="mb-4 flex items-center gap-3">
-                <span className="h-px w-10 bg-[#B99A54]" />
+            {/* RIGHT CONTENT */}
+            <div className="relative z-10 min-w-0">
 
-                <p className="text-s font-bold uppercase tracking-[0.22em] text-[#9B7A35]">
+              <div className="mb-4 flex items-center gap-3">
+                <span className="h-px w-10 shrink-0 bg-[#B99A54]" />
+
+                <p className="text-s font-bold uppercase tracking-[0.18em] text-[#9B7A35] sm:tracking-[0.22em]">
                   Academic Programs
                 </p>
               </div>
 
-              <h1 className="text-4xl font-semibold leading-[1.08] tracking-tight text-[#54151A] md:text-5xl lg:text-[3.4rem]">
+              <h1 className="text-3xl font-semibold leading-[1.08] tracking-tight text-[#54151A] min-[375px]:text-4xl md:text-5xl lg:text-[3.4rem]">
                 Find the pathway
                 <span className="block text-[#8B2028]">
                   that fits your future.
                 </span>
               </h1>
 
-              <p className="mt-6 max-w-xl text-base leading-7 text-[#080808]">
+              <p className="mt-5 max-w-xl text-sm leading-6 text-[#080808] sm:mt-6 sm:text-base sm:leading-7">
                 Four structured pathways designed around different ages,
                 learning speeds and academic goals — all leading toward
                 internationally recognized IGCSE and O-Level qualifications.
               </p>
 
-              <div className="mt-4 flex flex-wrap gap-3">
-                <div className="rounded-full border border-[#E5D8C7] bg-yellow-500 px-4 py-2 text-xs font-semibold text-navy">
+              <div className="mt-4 flex flex-wrap gap-2.5 sm:gap-3">
+
+                <div className="rounded-full border border-[#E5D8C7] bg-yellow-500 px-3 py-2 text-[11px] font-semibold text-navy sm:px-4 sm:text-xs">
                   ✓ Flexible Learning
                 </div>
 
-                <div className="rounded-full border border-[#E5D8C7] bg-yellow-500 px-4 py-2 text-xs font-semibold text-nav">
+                <div className="rounded-full border border-[#E5D8C7] bg-yellow-500 px-3 py-2 text-[11px] font-semibold text-navy sm:px-4 sm:text-xs">
                   ✓ Structured Pathways
                 </div>
 
-                <div className="rounded-full border border-[#E5D8C7] bg-yellow-500 px-4 py-2 text-xs font-semibold text-nav">
+                <div className="rounded-full border border-[#E5D8C7] bg-yellow-500 px-3 py-2 text-[11px] font-semibold text-navy sm:px-4 sm:text-xs">
                   ✓ Global Qualifications
                 </div>
+
               </div>
             </div>
+
           </div>
         </div>
       </section>
 
+
+      {/* =====================================================
+          2. PROGRAM CARDS
+      ====================================================== */}
       <section className="relative overflow-hidden bg-[#F4EEE5]">
+
         <div className="container-page pt-9 pb-3 md:pt-11 md:pb-4">
+
           <p className="text-xs font-bold uppercase tracking-[0.2em] text-[#9B7A35]">
             Choose Your Path
           </p>
@@ -235,10 +297,13 @@ export default function Programs() {
           <h2 className="mt-2 text-2xl font-semibold text-[#54151A] md:text-3xl">
             Four ways to reach your academic goals.
           </h2>
+
         </div>
 
         <div className="container-page pt-3 pb-14 md:pt-5 md:pb-18 lg:pb-20">
-          <div className="grid gap-7 md:grid-cols-2">
+
+          <div className="grid min-w-0 gap-5 sm:gap-7 md:grid-cols-2">
+
             {programs.map((program, index) => (
               <ProgramFlipCard
                 key={program.slug}
@@ -246,16 +311,26 @@ export default function Programs() {
                 index={index}
               />
             ))}
+
           </div>
         </div>
       </section>
 
+
+      {/* =====================================================
+          3. DESIGNED AROUND STUDENTS
+      ====================================================== */}
       <section className="bg-white">
+
         <div className="container-page py-16 md:py-20">
-          <div className="grid items-center gap-12 lg:grid-cols-2">
-            <div>
+
+          <div className="grid items-center gap-10 lg:grid-cols-2 lg:gap-12">
+
+            {/* LEFT CONTENT */}
+            <div className="min-w-0">
+
               <div className="flex items-center gap-3">
-                <span className="h-px w-10 bg-[#B99A54]" />
+                <span className="h-px w-10 shrink-0 bg-[#B99A54]" />
 
                 <p className="text-xs font-bold uppercase tracking-[0.2em] text-[#9B7A35]">
                   Designed Around Students
@@ -276,10 +351,13 @@ export default function Programs() {
                 academic route that matches individual circumstances
                 without compromising on quality.
               </p>
+
             </div>
 
-            <div className="grid gap-3 sm:grid-cols-2">
-              <div className="rounded-2xl border border-[#E8DDCE] bg-[#FFFCF8] p-5">
+            {/* RIGHT BENEFITS */}
+            <div className="grid min-w-0 gap-3 sm:grid-cols-2">
+
+              <div className="min-w-0 rounded-2xl border border-[#E8DDCE] bg-[#FFFCF8] p-5">
                 <p className="text-2xl">⚡</p>
 
                 <h3 className="mt-3 font-semibold text-[#54151A]">
@@ -291,7 +369,7 @@ export default function Programs() {
                 </p>
               </div>
 
-              <div className="rounded-2xl border border-[#E8DDCE] bg-[#FFFCF8] p-5">
+              <div className="min-w-0 rounded-2xl border border-[#E8DDCE] bg-[#FFFCF8] p-5">
                 <p className="text-2xl">🌍</p>
 
                 <h3 className="mt-3 font-semibold text-[#54151A]">
@@ -303,7 +381,7 @@ export default function Programs() {
                 </p>
               </div>
 
-              <div className="rounded-2xl border border-[#E8DDCE] bg-[#FFFCF8] p-5">
+              <div className="min-w-0 rounded-2xl border border-[#E8DDCE] bg-[#FFFCF8] p-5">
                 <p className="text-2xl">📚</p>
 
                 <h3 className="mt-3 font-semibold text-[#54151A]">
@@ -315,7 +393,7 @@ export default function Programs() {
                 </p>
               </div>
 
-              <div className="rounded-2xl border border-[#E8DDCE] bg-[#FFFCF8] p-5">
+              <div className="min-w-0 rounded-2xl border border-[#E8DDCE] bg-[#FFFCF8] p-5">
                 <p className="text-2xl">🎓</p>
 
                 <h3 className="mt-3 font-semibold text-[#54151A]">
@@ -326,15 +404,24 @@ export default function Programs() {
                   Build strong foundations for future academic opportunities.
                 </p>
               </div>
+
             </div>
           </div>
         </div>
       </section>
 
+
+      {/* =====================================================
+          4. CALL TO ACTION
+      ====================================================== */}
       <section className="bg-[#54151A]">
+
         <div className="container-page py-14 md:py-16">
+
           <div className="flex flex-col items-start justify-between gap-7 md:flex-row md:items-center">
-            <div>
+
+            <div className="min-w-0">
+
               <p className="text-xs font-bold uppercase tracking-[0.2em] text-[#E4C978]">
                 Ready to Begin?
               </p>
@@ -346,18 +433,21 @@ export default function Programs() {
               <p className="mt-2 max-w-xl text-sm leading-6 text-white/70">
                 Explore a program in detail or start your admission journey.
               </p>
+
             </div>
 
             <Link
               to="/admissions"
-              className="inline-flex shrink-0 items-center rounded-xl bg-[#EBC05A] px-6 py-3 text-sm font-bold text-[#54151A] transition hover:bg-[#F2D37B]"
+              className="inline-flex w-full shrink-0 items-center justify-center rounded-xl bg-[#EBC05A] px-6 py-3 text-sm font-bold text-[#54151A] transition hover:bg-[#F2D37B] sm:w-auto"
             >
               Start Your Application
               <span className="ml-2">→</span>
             </Link>
+
           </div>
         </div>
       </section>
+
     </div>
   );
 }
