@@ -20,7 +20,7 @@ const programs = [
     subjectsCovered: ['English', 'Mathematics', 'Biology', 'Chemistry', 'Physics'],
     duration: '1 Year',
     numberOfTerms: '2 Terms',
-    numberOfSubjects: '6 Subjects',
+    numberOfSubjects: '5 Subjects',
     startInfo: 'Starts Dec 2026',
     photo: '/images/programs/igcse-express-path.jpg',
     entryRequirements: 'Best suited to strong, self-motivated students aged 15+',
@@ -68,7 +68,7 @@ const programs = [
     ],
     atAGlance: { pace: 'Balanced', examSittings: '3', weeklyLoad: 'Moderate', bestFor: 'Gulf / International' },
     whoItSuits:
-      'Families abroad who need globally recognized university-entry subjects, delivered at a comfortable, evenly-spread pace.',
+      'Families abroad and specifically Gulf students who need globally recognized university-entry subjects, delivered at a comfortable, evenly-spread pace.',
   },
   {
     title: 'IGCSE National Path',
