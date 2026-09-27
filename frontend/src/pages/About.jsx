@@ -94,7 +94,7 @@ export default function About() {
 
                 <span className="h-px w-9 bg-[#B99A54]" />
 
-                <p className="text-xs font-bold uppercase tracking-[0.2em] text-[#9B7A35]">
+                <p className="text-s font-bold uppercase tracking-[0.2em] text-[#9B7A35]">
                   About Us
                 </p>
 
@@ -144,33 +144,33 @@ export default function About() {
               <div className="mt-6 flex flex-wrap items-center gap-x-7 gap-y-4 border-t border-[#E5DCCE] pt-5">
 
                 <div>
-                  <p className="text-lg font-bold text-[#54151A]">
+                  <p className="text-lg font-bold text-yellow-600">
                     IGCSE
                   </p>
 
-                  <p className="text-[11px] text-[#756D68]">
+                  <p className="text-[12px] text-navy">
                     International Pathways
                   </p>
                 </div>
 
 
                 <div>
-                  <p className="text-lg font-bold text-[#54151A]">
+                  <p className="text-lg font-bold text-yellow-600">
                     Online
                   </p>
 
-                  <p className="text-[11px] text-[#756D68]">
+                  <p className="text-[12px] text-navy">
                     Flexible Learning
                   </p>
                 </div>
 
 
                 <div>
-                  <p className="text-lg font-bold text-[#54151A]">
+                  <p className="text-lg font-bold text-yellow-600">
                     Global
                   </p>
 
-                  <p className="text-[11px] text-[#756D68]">
+                  <p className="text-[12px] text-navy">
                     Academic Opportunities
                   </p>
                 </div>

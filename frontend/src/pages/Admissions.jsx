@@ -96,32 +96,17 @@ export default function Admissions() {
 
               {/* LEFT — CONTENT */}
               <div>
+                {/* Eyebrow */}
+              <div className="mb-4 flex items-center gap-3">
 
-              {/* <span
-            className="
-              inline-flex
-              items-center
-              gap-1.5
-              rounded-full
-              border
-              border-amber-400/60
-              px-3
-              py-1
-              text-[10px]
-              font-semibold
-              uppercase
-              tracking-wide
-              text-amber-400
-            "
-          >
-            <IconCap className="h-3.5 w-3.5" />
+                <span className="h-px w-9 bg-[#B99A54]" />
 
-            Admissions Open
-          </span> */}
-
-                <p className="text-sm font-semibold uppercase tracking-[0.2em] text-[#9B7A35]">
+                <p className="text-s font-bold uppercase tracking-[0.2em] text-[#9B7A35]">
                   Admissions
                 </p>
+
+              </div>
+
 
                 <h1 className="mt-3 text-4xl font-semibold leading-[1.05] text-[#54151A] md:text-5xl">
                   Your admission journey
@@ -141,15 +126,15 @@ export default function Admissions() {
 
                 <div className="mt-6 flex flex-wrap gap-2">
 
-                  <div className="rounded-full border border-[#E5D8C7] bg-white px-4 py-2 text-xs font-semibold text-[#6A625E]">
+                  <div className="rounded-full border border-[#E5D8C7] bg-yellow-500 px-4 py-2 text-xs font-semibold text-navy">
                     ✓ Simple Process
                   </div>
 
-                  <div className="rounded-full border border-[#E5D8C7] bg-white px-4 py-2 text-xs font-semibold text-[#6A625E]">
+                  <div className="rounded-full border border-[#E5D8C7] bg-yellow-500 px-4 py-2 text-xs font-semibold text-navy">
                     ✓ Transparent Admissions
                   </div>
 
-                  <div className="rounded-full border border-[#E5D8C7] bg-white px-4 py-2 text-xs font-semibold text-[#6A625E]">
+                  <div className="rounded-full border border-[#E5D8C7] bg-yellow-500 px-4 py-2 text-xs font-semibold text-navy">
                     ✓ Student-Focused
                   </div>
 

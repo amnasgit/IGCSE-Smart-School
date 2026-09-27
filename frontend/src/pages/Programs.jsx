@@ -190,7 +190,7 @@ export default function Programs() {
               <div className="mb-4 flex items-center gap-3">
                 <span className="h-px w-10 bg-[#B99A54]" />
 
-                <p className="text-xs font-bold uppercase tracking-[0.22em] text-[#9B7A35]">
+                <p className="text-s font-bold uppercase tracking-[0.22em] text-[#9B7A35]">
                   Academic Programs
                 </p>
               </div>
@@ -208,16 +208,16 @@ export default function Programs() {
                 internationally recognized IGCSE and O-Level qualifications.
               </p>
 
-              <div className="mt-4 flex flex-wrap gap-2">
-                <div className="rounded-full border border-[#E5D8C7] bg-white px-4 py-2 text-xs font-semibold text-[#6A625E]">
+              <div className="mt-4 flex flex-wrap gap-3">
+                <div className="rounded-full border border-[#E5D8C7] bg-yellow-500 px-4 py-2 text-xs font-semibold text-navy">
                   ✓ Flexible Learning
                 </div>
 
-                <div className="rounded-full border border-[#E5D8C7] bg-white px-4 py-2 text-xs font-semibold text-[#6A625E]">
+                <div className="rounded-full border border-[#E5D8C7] bg-yellow-500 px-4 py-2 text-xs font-semibold text-nav">
                   ✓ Structured Pathways
                 </div>
 
-                <div className="rounded-full border border-[#E5D8C7] bg-white px-4 py-2 text-xs font-semibold text-[#6A625E]">
+                <div className="rounded-full border border-[#E5D8C7] bg-yellow-500 px-4 py-2 text-xs font-semibold text-nav">
                   ✓ Global Qualifications
                 </div>
               </div>

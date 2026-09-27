@@ -95,20 +95,6 @@ export default function ProgramDetail() {
             </>
           )}
 
-          {program.examSchedule?.length > 0 && (
-            <>
-              <h2 className="mt-8 text-xl font-semibold text-navy">Exam Schedule</h2>
-              <div className="mt-3 space-y-2">
-                {program.examSchedule.map((e) => (
-                  <div key={e.session} className="rounded-lg border-l-4 border-amber-400 bg-mist/60 px-4 py-2.5">
-                    <p className="text-sm font-semibold text-navy">{e.session}</p>
-                    <p className="text-sm text-navy-700/80">{e.subjects}</p>
-                  </div>
-                ))}
-              </div>
-            </>
-          )}
-
           {program.whoItSuits && (
             <>
               <h2 className="mt-8 text-xl font-semibold text-navy">Who It Suits</h2>
@@ -118,17 +104,6 @@ export default function ProgramDetail() {
         </div>
 
         <aside className="flex h-full flex-col gap-5">
-          {program.isLaunchingSoon && <span className="badge w-fit">Launching Soon</span>}
-
-          {program.photo && (
-            <div className="min-h-[30rem] overflow-hidden rounded-2xl">
-              <img
-                src={program.photo}
-                alt={`Student enrolled in ${program.title}`}
-                className="h-full w-full object-contain"
-              />
-            </div>
-          )}
 
           <div className="flex-shrink-0 rounded-2xl bg-navy p-6 shadow-sm">
             <dl className="space-y-3 text-sm">
@@ -149,6 +124,20 @@ export default function ProgramDetail() {
               {program.ctaLabel || 'Enroll Now'}
             </Link>
           </div>
+
+          {program.examSchedule?.length > 0 && (
+            <>
+              <h2 className="mt-8 text-xl font-semibold text-navy">Exam Schedule</h2>
+              <div className="mt-3 space-y-2">
+                {program.examSchedule.map((e) => (
+                  <div key={e.session} className="rounded-lg border-l-4 border-amber-400 bg-mist/60 px-4 py-2.5">
+                    <p className="text-sm font-semibold text-navy">{e.session}</p>
+                    <p className="text-sm text-navy-700/80">{e.subjects}</p>
+                  </div>
+                ))}
+              </div>
+            </>
+          )}
 
         </aside>
       </div>

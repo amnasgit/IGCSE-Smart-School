@@ -2,7 +2,7 @@ const features = [
   { title: 'Flexible Online Learning', desc: 'Study from anywhere with convenient schedules and modern digital tools.' },
   { title: 'Qualified & Experienced Teachers', desc: 'Expert guidance and academic support from dedicated educators.' },
   { title: 'Affordable Education', desc: 'Cost-effective, value-driven learning options.' },
-  { title: 'International-Style Curriculum', desc: 'Structured learning aligned with IGCSE standards.' },
+  { title: 'British Curriculum', desc: 'Structured learning aligned with IGCSE standards.' },
   { title: 'Weekly Performance Reporting', desc: 'Parents receive regular updates on attendance, participation, homework, and progress.' },
   { title: 'Student Support System', desc: 'Continuous guidance to keep students motivated and on track.' },
 ];

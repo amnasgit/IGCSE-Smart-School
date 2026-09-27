@@ -276,20 +276,20 @@ export default function Hero() {
               MAIN HEADING
           ================================================== */}
 
-          <h1
+          <h4
             className="
               mt-3
               font-display
-              text-2xl
+              text-xl
               font-bold
               uppercase
               leading-tight
               text-white
-              sm:text-3xl
+              sm:text-xl
             "
           >
-            IGCSE Smart School
-          </h1>
+            Welcome to IGCSE Smart School
+          </h4>
 
 
           {/* =================================================
@@ -307,7 +307,7 @@ export default function Hero() {
               sm:text-xl
             "
           >
-            Learn Anytime.
+            Your Future.
           </p>
 
 
@@ -321,7 +321,7 @@ export default function Hero() {
               sm:text-xl
             "
           >
-            Achieve Anywhere.
+            Our Mission.
           </p>
 
 

@@ -136,7 +136,7 @@ export default function Careers() {
 
                     <Link
                       to={`/careers/${job._id}`}
-                      className="btn-secondary !py-1.5 !px-4 text-xs"
+                      className="btn-primary !py-1.5 !px-4 text-xs"
                     >
                       Read More
                     </Link>

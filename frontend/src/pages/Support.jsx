@@ -5,9 +5,8 @@ export default function Support() {
   return (
     <>
       <PageHeader
-        eyebrow="Support"
-        title="Need help? We're here to guide you anytime."
-        subtitle="Browse frequently asked questions, share feedback, or reach our support team directly."
+        title="Support"
+        subtitle="Need help? We're here to guide you anytime. Browse frequently asked questions, share feedback, or reach our support team directly."
       />
       <section className="section">
         <div className="container-page grid gap-6 sm:grid-cols-3">
