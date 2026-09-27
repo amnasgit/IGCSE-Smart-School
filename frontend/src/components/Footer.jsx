@@ -128,7 +128,7 @@ export default function Footer() {
               <li>
                 <a
                   className="group flex items-center gap-2 transition-colors hover:text-amber-400"
-                  href="https://wa.me/+92 326 7127239"
+                  href="https://wa.me/+923267127239"
                   target="_blank"
                   rel="noreferrer"
                 >
@@ -144,7 +144,7 @@ export default function Footer() {
               <li>
                 <a
                   className="group flex items-center gap-2 transition-colors hover:text-amber-400"
-                  href="tel:+92 326 7127239"
+                  href="tel:+923267127239"
                 >
                   <FaPhone className="text-sm transition-transform group-hover:scale-110" />
                   (+92) 326 7127239

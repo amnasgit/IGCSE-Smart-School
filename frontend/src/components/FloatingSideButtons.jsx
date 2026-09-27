@@ -20,7 +20,7 @@ export default function FloatingSideButtons() {
       </Link>
         <br></br>
       <a
-        href="https://wa.me/10000000000"
+        href="https://wa.me/+923267127239"
         target="_blank"
         rel="noreferrer"
         className="flex items-center justify-center rounded-r-lg bg-[#25D366] px-2 py-4 shadow-lg transition hover:bg-[#1FB958]"
