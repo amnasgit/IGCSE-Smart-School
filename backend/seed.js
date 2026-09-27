@@ -1,11 +1,3 @@
-/**
- * Standalone script: replaces whatever is currently in the Programs
- * collection with the four official IGCSE Program Pathways, without
- * touching Users, FAQs, or any other collection.
- *
- * Run from the backend/ folder:
- *   node reseedPrograms.js
- */
 require('dotenv').config();
 const connectDB = require('./config/db');
 const Program = require('./models/Program');
@@ -25,7 +17,7 @@ const programs = [
       { label: 'Duration', value: '1 Academic Year' },
       { label: 'Exam Sessions', value: '2 Sessions' },
       { label: 'Study Pace', value: 'Intensive' },
-      { label: 'Ideal For', value: 'Strong / Older Students' },
+      { label: 'Subjects', value: '5'},
     ],
     startInfo: 'Starts Dec 2026',
     photo: '/images/programs/igcse-express-path.jpg',
@@ -57,10 +49,10 @@ const programs = [
     numberOfTerms: '3 Terms',
     numberOfSubjects: '6 Subjects',
     quickFacts: [
+      { label: 'Duration', value: '1.5 Academic Year' },
+      { label: 'Exam Sessions', value: '3 Sessions' },
       { label: 'Study Pace', value: 'Balanced' },
-      { label: 'Students', value: 'International / Gulf' },
-      { label: 'Focus', value: 'Core Subjects' },
-      { label: 'Goal', value: 'Global University Eligibility' },
+      { label: 'Subjects', value: '6'},
     ],
     startInfo: 'International / Gulf Students',
     entryRequirements: 'Open to international and Gulf-based students',
@@ -93,10 +85,10 @@ const programs = [
     numberOfTerms: '4 Terms',
     numberOfSubjects: '8 Subjects',
     quickFacts: [
-      { label: 'Students', value: 'Pakistani Students' },
-      { label: 'Subjects', value: 'Complete Subject Set' },
-      { label: 'Includes', value: 'Urdu & Pakistan Studies' },
-      { label: 'Focus', value: 'Local Equivalence' },
+      { label: 'Duration', value: '2 Academic Year' },
+      { label: 'Exam Sessions', value: '4 Sessions' },
+      { label: 'Study Pace', value: 'Standard' },
+      { label: 'Subjects', value: '8'},
     ],
     startInfo: 'Pakistani Students',
     entryRequirements: 'Open to students seeking Pakistani-university-recognized equivalence',
@@ -131,10 +123,10 @@ const programs = [
     numberOfTerms: '6 Terms',
     numberOfSubjects: '5/8 Subjects',
     quickFacts: [
-      { label: 'Age Group', value: '10–12 Years' },
-      { label: 'Study Pace', value: 'Mastery-Paced' },
-      { label: 'Approach', value: 'One Subject at a Time' },
-      { label: 'Focus', value: 'Confidence Building' },
+      { label: 'Duration', value: '3 Academic Year' },
+      { label: 'Exam Sessions', value: '6 Sessions' },
+      { label: 'Study Pace', value: 'Flexible' },
+      { label: 'Subjects', value: '5/8'},
     ],
     startInfo: 'Ages 10–12',
     entryRequirements: 'Open to younger students aged 10–12',
