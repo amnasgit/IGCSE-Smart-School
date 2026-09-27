@@ -10,6 +10,12 @@ const programSchema = new mongoose.Schema(
     duration: { type: String }, // e.g. "1.5 Years"
     numberOfTerms: { type: String }, // e.g. "3 Terms" — shown as a badge on the detail page
     numberOfSubjects: { type: String }, // e.g. "6 Subjects" — shown as a badge on the detail page
+    quickFacts: [
+      {
+        label: { type: String, trim: true },
+        value: { type: String, trim: true },
+      },
+    ],
     startInfo: { type: String }, // e.g. "Starts Dec 2026" or "Pakistani Students" — 4th badge
     photo: { type: String }, // path/URL to a student photo shown on this program's detail page
     entryRequirements: { type: String },
