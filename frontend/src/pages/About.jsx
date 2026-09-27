@@ -45,22 +45,24 @@ export default function About() {
             PAGE-SPECIFIC BACKGROUND
         ================================================== */}
 
-        <div className="pointer-events-none absolute inset-0 z-0 overflow-hidden">
-          <div
-            className="absolute inset-y-0 right-0 w-full md:w-[68%] lg:w-[62%] bg-cover bg-center"
-            style={{
-              backgroundImage: `url(${aboutSchoolImage})`,
-              maskImage:
-                'linear-gradient(to right, transparent 0%, rgba(0,0,0,0.15) 12%, rgba(0,0,0,0.45) 25%, rgba(0,0,0,0.8) 40%, black 55%)',
-              WebkitMaskImage:
-                'linear-gradient(to right, transparent 0%, rgba(0,0,0,0.15) 12%, rgba(0,0,0,0.45) 25%, rgba(0,0,0,0.8) 40%, black 55%)',
-            }}
-          />
+      <div className="pointer-events-none absolute inset-0 z-0 overflow-hidden">
+        <div
+          className="absolute inset-y-0 right-0 w-full md:w-[68%] lg:w-[62%] bg-cover bg-center"
+          style={{
+            backgroundImage: `url(${aboutSchoolImage})`,
+            maskImage:
+              'linear-gradient(to right, transparent 0%, rgba(0,0,0,0.25) 10%, rgba(0,0,0,0.65) 25%, rgba(0,0,0,0.9) 38%, black 50%)',
+            WebkitMaskImage:
+              'linear-gradient(to right, transparent 0%, rgba(0,0,0,0.25) 10%, rgba(0,0,0,0.65) 25%, rgba(0,0,0,0.9) 38%, black 50%)',
+          }}
+        />
 
-          <div className="absolute inset-0 bg-gradient-to-r from-[#FCF9F4] via-[#FCF9F4]/90 via-[28%] via-[#FCF9F4]/45 via-[48%] to-transparent" />
+        {/* Left-side soft fade — kept lighter so text remains readable */}
+        <div className="absolute inset-0 bg-gradient-to-r from-[#FCF9F4] via-[#FCF9F4]/80 via-[25%] via-[#FCF9F4]/25 via-[42%] to-transparent" />
 
-          <div className="absolute inset-0 bg-gradient-to-b from-[#FCF9F4]/10 via-transparent to-[#FCF9F4]/35" />
-        </div>
+        {/* Very subtle overall top/bottom fade */}
+        <div className="absolute inset-0 bg-gradient-to-b from-[#FCF9F4]/5 via-transparent to-[#FCF9F4]/20" />
+      </div>
 
 
         {/* =================================================
@@ -122,14 +124,14 @@ export default function About() {
 
 
               {/* Intro */}
-              <p className="mt-5 max-w-xl text-sm leading-6 text-[#5F5753] md:text-base">
+              <p className="mt-5 max-w-xl text-sm leading-6 text-[#080808] md:text-base">
                 IGCSE Smart School is an online education platform focused on
                 delivering flexible and high-quality IGCSE learning.
               </p>
 
 
               {/* Description */}
-              <p className="mt-2 max-w-xl text-sm leading-6 text-[#746B66]">
+              <p className="mt-2 max-w-xl text-sm leading-6 text-[#560319]">
                 We combine structured international education with the flexibility
                 of online learning, helping students build confidence, knowledge
                 and strong academic foundations.

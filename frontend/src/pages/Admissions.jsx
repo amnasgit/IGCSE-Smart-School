@@ -130,7 +130,7 @@ export default function Admissions() {
                   </span>
                 </h1>
 
-                <p className="mt-5 max-w-xl text-base leading-7 text-[#625A55] md:text-lg">
+                <p className="mt-5 max-w-xl text-base leading-7 text-[#080808] md:text-lg">
                   A simple and transparent path to enrollment. Start your
                   journey by applying to the admission form given below.
                 </p>

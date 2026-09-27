@@ -28,8 +28,8 @@ export default function Footer() {
             <h4 className="mb-3 text-sm font-semibold uppercase tracking-wide text-white">Contact Info</h4>
             <ul className="space-y-2 text-sm">
               <li><a className="hover:text-amber-400" href="mailto:info@igcsesmartschool.com">info@igcsesmartschool.com</a></li>
-              <li><a className="hover:text-amber-400" href="https://wa.me/10000000000" target="_blank" rel="noreferrer">Chat on WhatsApp</a></li>
-              <li><a className="hover:text-amber-400" href="tel:+92 335 9404434">(000) 987 654 321</a></li>
+              <li><a className="hover:text-amber-400" href="https://wa.me/+92 335 9404434" target="_blank" rel="noreferrer">Chat on WhatsApp</a></li>
+              <li><a className="hover:text-amber-400" href="tel:+92 335 9404434">(+92) 335 9404434</a></li>
             </ul>
             <div className="mt-4 flex gap-3">
               <a aria-label="Facebook" className="hover:text-amber-400" href="https://www.facebook.com/igcsesmartschool" target="_blank" rel="noreferrer">Facebook</a>

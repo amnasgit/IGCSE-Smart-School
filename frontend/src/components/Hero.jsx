@@ -147,7 +147,7 @@ export default function Hero() {
           DECORATIVE BACKGROUND
       ====================================================== */}
 
-      <svg
+      {/* <svg
         className="pointer-events-none absolute -left-16 -top-10 h-[320px] w-[320px] opacity-[0.06]"
         viewBox="0 0 24 24"
         fill="none"
@@ -156,7 +156,7 @@ export default function Hero() {
         aria-hidden="true"
       >
         <path d="M12 2.5 4 6v6c0 5 3.4 8.4 8 9.5 4.6-1.1 8-4.5 8-9.5V6l-8-3.5Z" />
-      </svg>
+      </svg> */}
 
 
       {/* Background glow */}
@@ -254,7 +254,7 @@ export default function Hero() {
         "
       >
 
-        <div className="max-w-lg translate-y-8 sm:translate-y-10 lg:translate-y-6">
+        <div className="max-w-lg translate-y-6 sm:translate-y-6 lg:translate-y-3">
 
           {/* =================================================
               SCHOOL LOGO / ICON
@@ -264,9 +264,9 @@ export default function Hero() {
             src={schoolIcon}
             alt="IGCSE Smart School Logo"
             className="
-              mb-2
-              h-16
-              w-16
+              mb-1
+              h-24
+              w-24
               object-contain
             "
           />

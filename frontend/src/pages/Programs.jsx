@@ -202,7 +202,7 @@ export default function Programs() {
                 </span>
               </h1>
 
-              <p className="mt-6 max-w-xl text-base leading-7 text-[#5F5753]">
+              <p className="mt-6 max-w-xl text-base leading-7 text-[#080808]">
                 Four structured pathways designed around different ages,
                 learning speeds and academic goals — all leading toward
                 internationally recognized IGCSE and O-Level qualifications.
